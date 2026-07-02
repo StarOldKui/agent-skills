@@ -1,6 +1,6 @@
 ---
 name: codex-rate-limit-reset-credits
-description: Check local Codex/ChatGPT rate-limit reset credits by reading ~/.codex/auth.json and calling the ChatGPT reset-credits endpoint. Use this whenever the user asks to check Codex reset credits, rate-limit reset credits, reset info, reset信息, available reset credits, or asks to "再查查" after a reset-credit lookup. Return only the reset-credit Markdown table by default, with no explanatory prose, no tokens, no cookies, and no complete unique IDs.
+description: Check local Codex/ChatGPT rate-limit reset credits by reading ~/.codex/auth.json and calling the ChatGPT reset-credits endpoint. Use this whenever the user asks to check Codex reset credits, rate-limit reset credits, reset info, available reset credits, or asks to re-check after a reset-credit lookup. Return only the reset-credit Markdown table by default, with no explanatory prose, no tokens, no cookies, and no complete unique IDs.
 ---
 
 # Rate Limit Reset Credits
@@ -25,15 +25,15 @@ node <skill-dir>/scripts/check_reset_credits.js
 2. If the script returns `status: 401`, respond only:
 
 ```text
-凭证失效或 Authorization header 未带上
+Credentials are expired or the Authorization header is missing.
 ```
 
-3. If the script returns any other error, respond with the shortest practical Chinese error line and do not include secrets.
+3. If the script returns any other error, respond with the shortest practical English error line and do not include secrets.
 
 4. On success, convert the sanitized `credits` array into exactly this Markdown table shape and nothing else:
 
 ```markdown
-| status | title | granted_at 本地时间 | expires_at 本地时间 |
+| status | title | granted_at_local | expires_at_local |
 |---|---|---:|---:|
 | available | Full reset (Weekly + 5 hr) | 2026-07-02 05:04:29 AEST | 2026-08-01 05:04:29 AEST |
 ```
