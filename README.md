@@ -22,7 +22,7 @@ Codemap: if the project has `docs/codemap.md`, evaluate it on every task. Update
 
 ### codex-rate-limit-reset-credits
 
-Checks local Codex/ChatGPT rate-limit reset credits from `~/.codex/auth.json` and returns only a sanitized Markdown table by default.
+Checks local Codex/ChatGPT rate-limit reset credits from `~/.codex/auth.json` and returns only a sanitized Markdown table source block by default.
 
 Install:
 
@@ -33,7 +33,7 @@ npx skills add StarOldKui/agent-skills --skill codex-rate-limit-reset-credits
 Recommended `AGENTS.md` instruction:
 
 ```markdown
-Use codex-rate-limit-reset-credits whenever checking Codex reset credits. The final success response should be only the Markdown table of status, title, granted_at local time, and expires_at local time; do not print tokens, cookies, raw API responses, or complete unique IDs.
+Use codex-rate-limit-reset-credits whenever checking Codex reset credits. The final success response should be only one fenced markdown code block containing the Markdown table source for status, title, granted_at local time, and expires_at local time; do not print tokens, cookies, raw API responses, or complete unique IDs.
 ```
 
 ## Repository Layout
