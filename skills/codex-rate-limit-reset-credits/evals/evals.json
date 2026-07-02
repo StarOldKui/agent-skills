@@ -1,0 +1,23 @@
+{
+  "skill_name": "codex-rate-limit-reset-credits",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我查一下 rate-limit reset credits",
+      "expected_output": "Only a Markdown table with status, title, granted_at local time, and expires_at local time. No prose, tokens, cookies, IDs, or available_count.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "再查查 reset 信息，跟上次一样只要表格",
+      "expected_output": "Only the reset-credit Markdown table, with UTC timestamps converted to local time.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "用本机 Codex 凭证看一下还有哪些 reset credits，不要打印任何 token/cookie/id",
+      "expected_output": "Only the reset-credit Markdown table, with no secrets or complete unique IDs.",
+      "files": []
+    }
+  ]
+}
