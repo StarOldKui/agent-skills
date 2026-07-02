@@ -4,19 +4,19 @@
     {
       "id": 1,
       "prompt": "Check my rate-limit reset credits.",
-      "expected_output": "Only a fenced markdown code block containing a Markdown table with status, title, granted_at local time, and expires_at local time. No prose, tokens, cookies, IDs, or available_count.",
+      "expected_output": "Only a Markdown table with status, title, granted_at local time, and expires_at local time. No code fence, prose, tokens, cookies, IDs, or available_count.",
       "files": []
     },
     {
       "id": 2,
       "prompt": "Check reset info again, same as before, table only.",
-      "expected_output": "Only a fenced markdown code block containing the reset-credit Markdown table, with UTC timestamps converted to local time.",
+      "expected_output": "Only the reset-credit Markdown table, with UTC timestamps converted to local time and no code fence.",
       "files": []
     },
     {
       "id": 3,
       "prompt": "Use local Codex credentials to check available reset credits. Do not print any token, cookie, or ID.",
-      "expected_output": "Only a fenced markdown code block containing the reset-credit Markdown table, with no secrets or complete unique IDs.",
+      "expected_output": "Only the reset-credit Markdown table, with no code fence, secrets, or complete unique IDs.",
       "files": []
     }
   ]
