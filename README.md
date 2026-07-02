@@ -20,6 +20,16 @@ Recommended `AGENTS.md` instruction:
 Codemap: if the project has `docs/codemap.md`, evaluate it on every task. Update it in the same task whenever the architecture snapshot becomes stale, especially when system boundaries, ownership, runtime truth, persistence boundaries, routes, env contracts, integrations, infra assumptions, gating rules, or core flows change; otherwise briefly state that no codemap update is needed.
 ```
 
+### grill-me
+
+Interviews the user relentlessly about a plan or design until every branch of the decision tree reaches shared understanding.
+
+Install:
+
+```bash
+npx skills add StarOldKui/agent-skills --skill grill-me
+```
+
 ## Repository Layout
 
 ```text
@@ -29,6 +39,8 @@ skills/
     references/
       main-codemap-template.md
       child-codemap-template.md
+  grill-me/
+    SKILL.md
 ```
 
 ## Requirements
